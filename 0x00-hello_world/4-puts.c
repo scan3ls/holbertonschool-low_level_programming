@@ -1,7 +1,10 @@
 #include <stdio.h>
 /**
- * Display a message using puts()
+ * main - Short description, single line
+ *
+ * Return: Value of 0
  */
+
 int main(void)
 {
 char str1[100] = "\"Programming is like building a multilingual puzzle";

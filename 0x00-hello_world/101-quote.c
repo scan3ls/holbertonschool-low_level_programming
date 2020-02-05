@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <unistd.h>
+#include <string.h>
 /**
  * main - print a message
  *
@@ -6,8 +8,7 @@
  */
 int main(void)
 {
-char str1[40] = "and that piece of art is useful\"\0";
-char str2[40] = " - Dora Korpar, 2015-10-19\n\0";
-fprintf(stderr, "%s%s", str1, str2);
+char str1[100] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+write(2, str1, 59);
 return (1);
 }

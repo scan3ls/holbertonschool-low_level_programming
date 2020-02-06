@@ -17,7 +17,7 @@ int main(void)
 	{
 		for (n2 = n1 + 1; n2 <= 9; n2++)
 		{
-			putchar((n1 / 10) + '0');
+			putchar((n1 % 10) + '0');
 			putchar((n2 % 10) + '0');
 			if (n1 == 8 && n2 == 9)
 				continue;

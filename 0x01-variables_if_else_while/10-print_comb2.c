@@ -22,8 +22,8 @@ int main(void)
 			if (num1 != NINE || num2 != NINE)
 			{
 				putchar(COMMA);
+				putchar(SPACE);
 			}
-			putchar(SPACE);
 		}
 	}
 	putchar(NEWLINE);

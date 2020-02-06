@@ -11,16 +11,18 @@
 
 int main(void)
 {
-	int n1;
+	int n1, n2;
 
-	for (n1 = 1; n1 <= 89; n1++)
+	for (n1 = 1; n1 <= 8; n1++)
 	{
-		putchar((n1 / 10) + '0');
-		putchar((n1 % 10) + '0');
-		if (n1 != 89)
+		for (n2 = n1 + 1; n2 <= 9; n2++)
 		{
-		putchar(COMMA);
-		putchar(SPACE);
+			putchar((n1 / 10) + '0');
+			putchar((n1 % 10) + '0');
+			if (n1 == 8 && n2 == 9)
+				continue;
+			putchar(COMMA);
+			putchar(SPACE);
 		}
 	}
 

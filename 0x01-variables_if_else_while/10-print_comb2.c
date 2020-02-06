@@ -19,11 +19,11 @@ int main(void)
 		{
 			putchar(num1);
 			putchar(num2);
-			putchar(SPACE);
 			if (num1 != NINE || num2 != NINE)
 			{
 				putchar(COMMA);
 			}
+			putchar(SPACE);
 		}
 	}
 	putchar(NEWLINE);

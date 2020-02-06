@@ -2,6 +2,7 @@
 #define ZERO 48
 #define COMMA 44
 #define NINE 57
+#define SPACE 32
 #define NEWLINE 10
 /**
  * main - print base 10 numbers seperated by commas
@@ -18,6 +19,7 @@ int main(void)
 		if (alpha != NINE)
 		{
 			putchar(COMMA);
+			putchar(SPACE);
 
 		}
 	}

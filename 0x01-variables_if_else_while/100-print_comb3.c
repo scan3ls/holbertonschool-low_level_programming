@@ -17,7 +17,7 @@ int main(void)
 	{
 		putchar((n1 / 10) + '0');
 		putchar((n1 % 10) + '0');
-		if ( n1 != 89)
+		if (n1 != 89)
 		{
 		putchar(COMMA);
 		putchar(SPACE);

@@ -25,5 +25,4 @@ Prints the alphabet in lowercase using custom functions.
 Prints the alphabet in lowercase ten times using custom functions.
 
 #### 3-islower.c
-Checks for lowercase character
-
+Checks for lowercase character.

@@ -15,6 +15,11 @@ This is a project repository for Holberton School.
 ## Task Description
 
 
-0. Prints a string using custom _putchar function.
+#### 0-holberton.c
+Prints a string using custom _putchar function.
 
-1. Prints the alpha bet in lowercase using custom functions.
+#### 1-print_alphabet.c
+Prints the alphabet in lowercase using custom functions.
+
+#### 2-print_alphabet_x10.c
+Prints the alphabet in lowercase ten times using custom functions.

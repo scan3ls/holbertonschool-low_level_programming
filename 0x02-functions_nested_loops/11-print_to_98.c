@@ -12,7 +12,6 @@ void print_to_98(int n)
 		if (n == 98)
 		{
 			printf("%d", n);
-			count++;
 			break;
 		}
 
@@ -20,7 +19,6 @@ void print_to_98(int n)
 			printf("%d, ", n--);
 		else
 			printf("%d, ", n++);
-		count++;
 	} while (1);
 
 	putchar('\n');

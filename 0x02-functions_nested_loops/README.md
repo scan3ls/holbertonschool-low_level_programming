@@ -47,3 +47,7 @@ Print the 9 times table, starting with 0
 
 #### 10-add.c
 Returns the value of the integers add together.
+
+
+#### 11-print_to_98.c
+Prints all natural numbers from n to 98, follwed by a new line.

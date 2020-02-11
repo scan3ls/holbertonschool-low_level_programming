@@ -26,3 +26,6 @@ Prints the alphabet in lowercase ten times using custom functions.
 
 #### 3-islower.c
 Checks for lowercase character.
+
+#### 4-isalpha.c
+Checks for alphabetic character.

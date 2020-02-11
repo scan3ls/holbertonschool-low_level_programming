@@ -1,4 +1,4 @@
-#0x02 C - Functions, nested loops
+# 0x02 C - Functions, nested loops
 
 This is a project repository for Holberton School.
 
@@ -15,4 +15,6 @@ This is a project repository for Holberton School.
 ## Task Description
 
 
-1. Prints a string using custom _putchar function
+0. Prints a string using custom _putchar function.
+
+1. Prints the alpha bet in lowercase using custom functions.

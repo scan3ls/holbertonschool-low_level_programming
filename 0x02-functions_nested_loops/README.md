@@ -29,3 +29,6 @@ Checks for lowercase character.
 
 #### 4-isalpha.c
 Checks for alphabetic character.
+
+#### 5-sign.c
+Print the sign of a number

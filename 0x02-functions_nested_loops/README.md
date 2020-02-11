@@ -23,3 +23,7 @@ Prints the alphabet in lowercase using custom functions.
 
 #### 2-print_alphabet_x10.c
 Prints the alphabet in lowercase ten times using custom functions.
+
+#### 3-islower.c
+Checks for lowercase character
+

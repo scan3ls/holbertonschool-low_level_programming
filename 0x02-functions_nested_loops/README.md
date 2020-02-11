@@ -11,3 +11,8 @@ This is a project repository for Holberton School.
 - Scope of variables
 
 - Header files and how to use them with ``` #include ```
+
+## Task Description
+
+
+1. Prints a string using custom _putchar function

@@ -12,7 +12,7 @@ int isBuzz(int n);
 int main(void)
 {
 	int num;
-	
+
 	printf("1");
 	for (num = 2; num <= 100; num++)
 	{
@@ -21,16 +21,15 @@ int main(void)
 			printf(" FizzBuzz");
 			continue;
 		}
-		if(isFizz(num))
+		if (isFizz(num))
 		{
 			printf(" Fizz");
 			continue;
 		}
-		if(isBuzz(num))
+		if (isBuzz(num))
 			printf(" Buzz");
 		else
 			printf(" %d", num);
-				
 	}
 	return (0);
 }
@@ -43,7 +42,7 @@ int main(void)
   */
 int isFizz(int n)
 {
-	return (n % 3 == 0) ? 1 : 0;
+	return ((n % 3 == 0) ? 1 : 0);
 }
 
 /**
@@ -54,5 +53,5 @@ int isFizz(int n)
   */
 int isBuzz(int n)
 {
-	return (n % 5 == 0) ? 1 : 0;
+	return ((n % 5 == 0) ? 1 : 0);
 }

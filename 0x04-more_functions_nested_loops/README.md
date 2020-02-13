@@ -15,3 +15,8 @@
 - Header files and how to use them with ```c #include```
 
 ## Task Description
+
+#### 0-isupper.c
+
+Will check a letter for uppercase and return 1 if true, otherwise will return 0
+

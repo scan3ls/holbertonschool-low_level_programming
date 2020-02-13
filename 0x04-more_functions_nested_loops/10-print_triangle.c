@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-  * print_square - prints a triangle with # followed by a new line
+  * print_triangle- prints a triangle with # followed by a new line
   *@size: height and length of the square
   *
   * Return: void

@@ -6,9 +6,6 @@
   *
   * Return: void
   */
-int isFizz(int n);
-int isBuzz(int n);
-
 int main(void)
 {
 	int num;

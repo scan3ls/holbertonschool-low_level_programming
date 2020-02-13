@@ -28,6 +28,7 @@ int main(void)
 		else
 			printf(" %d", num);
 	}
+	putchar('\n');
 	return (0);
 }
 

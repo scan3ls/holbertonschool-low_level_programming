@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
-  * _isupper - checks if value is a digit
+  * _isdigit - checks if value is a digit
   *@c: value to be checked
   *
   * Description: Int c will be compared with the ASCII

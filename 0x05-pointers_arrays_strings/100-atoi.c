@@ -35,6 +35,7 @@ int _pow(int base, int n)
 /**
   * getSign - get the sign of a string for conversion to int
   *@s: string used
+  *@numStart: stop counting sign at numStart
   *
   * Return: int 1 if positive -1 if negative
   */

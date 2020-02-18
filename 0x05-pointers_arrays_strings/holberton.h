@@ -23,6 +23,12 @@ void print_array(int *a, int n);
 
 char *_strcpy(char *dest, char *src);
 
+int _atoi(char *s);
 
+int _pow(int base, int n);
+
+int getSign(char *s);
+
+int getNum(char *s);
 
 #endif

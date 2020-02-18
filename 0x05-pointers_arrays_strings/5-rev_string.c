@@ -1,4 +1,5 @@
 #include "holberton.h"
+#define MAXLINE 1000
 
 /**
   * rev_string - reverses a string
@@ -11,7 +12,7 @@ void rev_string(char *s)
 {
 	int len = _strlen(s);
 	int i = 0;
-	char tmp[200];
+	char tmp[MAXLINE];
 
 	while (i < len)
 	{

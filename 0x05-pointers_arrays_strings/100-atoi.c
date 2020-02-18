@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
   * _atoi - converts a string to an integer
   *@s: string to convert
@@ -80,7 +80,7 @@ int getNum(char *s)
 			break;
 		}
 	}
-	printf("--first: %d\n--last: %d\n", first, last);
+
 	if (first == 0 && last == 0)
 		return (0);
 	i = first;

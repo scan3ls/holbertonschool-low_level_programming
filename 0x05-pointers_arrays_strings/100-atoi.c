@@ -9,10 +9,9 @@
 
 int _atoi(char *s)
 {
-	int sign = getSign(s);
 	int sum = getNum(s);
 
-	return (sum * sign);
+	return (sum);
 }
 
 /**
@@ -40,12 +39,12 @@ int _pow(int base, int n)
   * Return: int 1 if positive -1 if negative
   */
 
-int getSign(char *s)
+int getSign(char *s, int numStart)
 {
 	int i;
 	int sign = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; i < numStart; i++)
 	{
 		if (s[i] == '+')
 			sign++;
@@ -89,5 +88,5 @@ int getNum(char *s)
 		sum	+= ((s[i] - '0') * multi);
 		i++;
 	}
-	return (sum);
+	return (sum * getSign(s, first));
 }

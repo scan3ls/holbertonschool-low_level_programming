@@ -47,12 +47,10 @@ int getSign(char *s, int numStart)
 
 	for (i = 0; i < numStart; i++)
 	{
-		if (s[i] == '+')
-			sign++;
 		if (s[i] == '-')
-			sign--;
+			sign++;
 	}
-	return (sign >= 0 ? 1 : -1);
+	return (sign % 2 == 0 ? 1 : -1);
 }
 
 /**
@@ -84,7 +82,8 @@ int getNum(char *s)
 	if (first == 0 && last == 0)
 		return (0);
 	i = first;
-	for (multi = (_pow(10, (last - first)) / 10); multi > 0; multi /= 10)
+
+	for (multi = (_pow(10, ((last - first)-1))); multi > 0; multi /= 10)
 	{
 		sum	+= ((s[i] - '0') * multi);
 		i++;

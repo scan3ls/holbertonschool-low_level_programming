@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
   * _atoi - converts a string to an integer
   *@s: string to convert
@@ -64,7 +64,9 @@ int getSign(char *s)
 
 int getNum(char *s)
 {
-	int i, multi, first, last;
+	int i, multi;
+	int first = 0;
+	int last = 0;
 	int sum = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
@@ -78,7 +80,9 @@ int getNum(char *s)
 			break;
 		}
 	}
-
+	printf("--first: %d\n--last: %d\n", first, last);
+	if (first == 0 && last == 0)
+		return (0);
 	i = first;
 	for (multi = (_pow(10, (last - first)) / 10); multi > 0; multi /= 10)
 	{

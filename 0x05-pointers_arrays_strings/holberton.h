@@ -27,7 +27,7 @@ int _atoi(char *s);
 
 int _pow(int base, int n);
 
-int getSign(char *s);
+int getSign(char *s,int numStart);
 
 int getNum(char *s);
 

@@ -15,7 +15,7 @@ char *cap_string(char *s)
 	{
 		if (!(inWord(s[i])))
 			capNext = 1;
-		if ((s[i] >= 'A' && s[i] <= 'Z'))
+		if ((s[i] >= 'A' && s[i] <= 'Z') || (s[i] >= '0' && s[i] <= '9'))
 			capNext = 0;
 		if (_isLower(s[i]) && capNext)
 		{

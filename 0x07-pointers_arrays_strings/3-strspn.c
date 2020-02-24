@@ -14,6 +14,7 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int k;
 	unsigned int lastIndex = 0;
 	int flag = 0;
+
 	while (accept[i] != '\0')
 	{
 		for (k = 0; s[k] != '\0'; k++)

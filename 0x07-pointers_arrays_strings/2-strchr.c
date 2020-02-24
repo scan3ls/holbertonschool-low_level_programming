@@ -1,5 +1,5 @@
 #include "holberton.h"
-#define NULL 0
+#define NULL '\0'
 /**
  * _strchr - locates first occurrence of a character in a string
  *@s: string used

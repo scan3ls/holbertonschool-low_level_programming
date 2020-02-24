@@ -13,18 +13,23 @@ unsigned int _strspn(char *s, char *accept)
 	int i = 0;
 	unsigned int k;
 	unsigned int lastIndex = 0;
-
+	int flag = 0;
 	while (accept[i] != '\0')
 	{
 		for (k = 0; s[k] != '\0'; k++)
 		{
 			if (s[k] != accept[i])
-				;
+			{
+				if (flag == 1)
+					break;
+			}
 			else
 			{
 				if (lastIndex < k)
+				{
 					lastIndex = k;
-				break;
+					flag = 1;
+				}
 			}
 		}
 		i++;

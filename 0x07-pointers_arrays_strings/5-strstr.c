@@ -15,7 +15,7 @@ char *_strstr(char *haystack, char *needle)
 	while (*(haystack + c) != 0)
 	{
 
-		if(_strcmp((haystack + c), needle) == 0)
+		if (_strcmp((haystack + c), needle) == 0)
 			start = c;
 		else
 			start = -1;

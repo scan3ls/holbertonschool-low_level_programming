@@ -10,5 +10,5 @@
 
 void set_string(char **s, char *to)
 {
-	printf("target: %s\nsrc: %s\n", to, *s);
+	*s = to;
 }

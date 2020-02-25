@@ -10,30 +10,17 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
+	unsigned int i = 0;
 	unsigned int k;
-	unsigned int lastIndex = 0;
-	int flag = 0;
 
-	while (accept[i] != '\0')
+	while (s[i])
 	{
-		for (k = 0; s[k] != '\0'; k++)
+		for (k = 0; s[i] != accept[k]; k++)
 		{
-			if (s[k] != accept[i])
-			{
-				if (flag == 1)
-					break;
-			}
-			else
-			{
-				if (lastIndex < k)
-				{
-					lastIndex = k;
-					flag = 1;
-				}
-			}
+			if (!(accept[k]))
+				return (i);
 		}
 		i++;
 	}
-	return (lastIndex + 1);
+	return (i);
 }

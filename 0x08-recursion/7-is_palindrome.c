@@ -10,6 +10,8 @@
 
 int _pally(char *s1, int n)
 {
+	if (n < 0)
+		return (1);
 	if (*(s1 + 0) != *(s1 + n))
 	{
 		return (0);

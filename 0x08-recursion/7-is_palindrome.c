@@ -25,6 +25,12 @@ int _pally(char *s1, int n)
 	return (_pally((s1 + 1), n - 2));
 }
 
+int slen(char *s, int count)
+{
+	if(*(s + count) == '\0')
+		return (count);
+	return (slen(s, count + 1));
+}
 /**
  * is_palindrome - checks if string is palindrome
  *@s: string checked
@@ -34,10 +40,9 @@ int _pally(char *s1, int n)
 
 int is_palindrome(char *s)
 {
-	int slen;
+	int sln;
 
-	for (slen = 0; s[slen] != '\0'; slen++)
-		;
+	sln = slen(s, 0);
 
-	return (_pally(s, slen - 1));
+	return (_pally(s, sln - 1));
 }

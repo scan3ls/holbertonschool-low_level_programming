@@ -25,9 +25,17 @@ int _pally(char *s1, int n)
 	return (_pally((s1 + 1), n - 2));
 }
 
+/**
+ * slen - gets length of string recurively
+ *@s: string used
+ *@count: length counter
+ *
+ * Return: length
+ */
+
 int slen(char *s, int count)
 {
-	if(*(s + count) == '\0')
+	if (*(s + count) == '\0')
 		return (count);
 	return (slen(s, count + 1));
 }

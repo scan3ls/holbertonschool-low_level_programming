@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	{
 		if (!isDigit(*(argv[index])))
 		{
-			printf("Error");
+			printf("Error\n");
 			return (1);
 		}
 

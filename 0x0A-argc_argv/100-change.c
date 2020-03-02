@@ -79,5 +79,5 @@ int getCoins(int cents)
 			cents -= PENNY;
 		}
 	}
-	return count;
+	return (count);
 }

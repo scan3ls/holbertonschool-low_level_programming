@@ -13,16 +13,19 @@ int main(int argc, char *argv[])
 {
 	int index;
 	int sum = 0;
+	int currentNumber;
 
 	for (index = 1; index < argc; index++)
 	{
-		if (!isDigit(*(argv[index])))
+		currentNumber = _atoi(argv[index]);
+
+		if (!isDigit(*(argv[index])) || currentNumber < 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
 
-		sum += _atoi(argv[index]);
+		sum += currentNumber;
 	}
 	printf("%d\n", sum);
 	return (0);
@@ -54,7 +57,7 @@ int _atoi(char *s)
 			inNum = 1;
 		}
 		if (!(isDigit(s[i])) && inNum == 1)
-			break;
+			return (-1);
 		i++;
 	}
 	return (sign * sum);

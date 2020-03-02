@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -79,4 +79,5 @@ int getCoins(int cents)
 			cents -= PENNY;
 		}
 	}
+	return count;
 }

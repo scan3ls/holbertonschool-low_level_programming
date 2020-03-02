@@ -1,3 +1,4 @@
+B#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -20,6 +21,35 @@ int main(int argc, char *argv[])
 {
 	int count = 0;
 	int cents = atoi(argv[1]);
+
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	if (cents <= 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	count = getCoins(cents);
+
+	printf("%d\n", count);
+	return (0);
+}
+
+/**
+ * getCoins - firgure minimum number of coins needed
+ *@cents: starting total cents
+ *
+ * Return: number of coins as integer
+ */
+
+int getCoins(int cents)
+{
+	int count = 0;
 
 	while (cents != 0)
 	{
@@ -49,7 +79,4 @@ int main(int argc, char *argv[])
 			cents -= PENNY;
 		}
 	}
-
-	printf("%d\n", count);
-	return 0;
 }

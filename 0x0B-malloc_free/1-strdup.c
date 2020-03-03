@@ -14,17 +14,18 @@ char *_strdup(char *str)
 	char *p = malloc(getLength(str) * sizeof(char));
 	int index;
 
-	if (*p == 0)
+	if (str)
 	{
-		return (0);
-	}
-	/*copy string str to memory position @ p*/
-	for (index = 0; str[index] != '\0'; index++)
-	{
-		p[index] = str[index];
+		/*copy string str to memory position @ p*/
+		for (index = 0; str[index] != '\0'; index++)
+		{
+			p[index] = str[index];
+		}
+
+		return (p);
 	}
 
-	return (p);
+	return (0);
 }
 
 /**

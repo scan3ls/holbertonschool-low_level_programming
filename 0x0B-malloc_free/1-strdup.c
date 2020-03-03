@@ -26,7 +26,7 @@ char *_strdup(char *str)
 	}
 
 	/*copy string str to memory position @ p*/
-	for (index = 0; index < strlen; index++)
+	for (index = 0; index <= strlen; index++)
 	{
 		*(p + index) = *(str + index);
 	}

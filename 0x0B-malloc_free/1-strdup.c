@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	char *p = malloc(getLength(str) * sizeof(char));
 	int index = 0;
 
-	if (str == 0)
+	if (str)
 	{
 		/*copy string str to memory position @ p*/
 		for (index = 0; str[index] != '\0'; index++)
@@ -25,7 +25,7 @@ char *_strdup(char *str)
 		return (p);
 	}
 
-	return (0);
+	return (NULL);
 }
 
 /**

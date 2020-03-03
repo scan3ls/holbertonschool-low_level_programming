@@ -19,7 +19,7 @@ char *_strdup(char *str)
 		if (p)
 		{
 			/*copy string str to memory position @ p*/
-			for (index = 0; str[index] != '\0'; index++)
+			for (index = 0; index < getLength(str); index++)
 			{
 				p[index] = str[index];
 			}

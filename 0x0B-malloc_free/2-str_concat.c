@@ -12,8 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *concatStr;
-	int strlenS1;
-	int strlenS2;
+	int strlenS1, strlenS2, strlenS3;
 
 	/*Check if NULL is passed*/
 	if (s1 == NULL)
@@ -24,26 +23,27 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2[0] = '\0';
 	}
+
 	/*Get string lengths: Set strlenS2 to length of final string*/
 	strlenS1 = getLength(s1);
-	strlenS2 = getLength(s2)
-	strlenS2 = (strlenS1 - 1) + strlenS2;
+	strlenS2 = getLength(s2);
+
+	/*Set final string length*/
+	strlenS3 = (strlenS1 - 1) + strlenS2;
+
 	/*Allocate enough memory for final string*/
-	concatStr = malloc(sizeof(char) * strlenS1);
+	concatStr = malloc(sizeof(char) * strlenS3);
+
 	/*Verify if malloc was successful*/
 	if (concatStr == NULL)
 	{
 		return (NULL);
 	}
-	/*Copy strings to new location*/
-	for (int index = 0; index < strlenS2; index++)
-	{
-		/*Skips s1 null terminator*/
-		if (index == strlenS1)
-			index++;
 
-		*(concatStr + index) = *(s1 + index);
-	}
+	/*Copy strings to new location*/
+	_strcpy(s1, concatStr, 0, (strlenS1 - 1));
+	_strcpy(s2, concatStr, (strlenS1 - 1), strlenS3);
+
 	return (concatStr);
 }
 
@@ -61,4 +61,24 @@ int getLength(char *s)
 	for (length = 0; s[length] != '\0'; length++)
 		;
 	return (length + 1);
+}
+
+/**
+ * _strcpy - copy a string to a pointer location
+ *@str: string to copy
+ *@dest: pointer location destination
+ *@length: amount of the source string copied
+ *@start: starting index
+ *
+ * Return: copied string
+ */
+
+void _strcpy(char *str, char *dest, int start, int length)
+{
+	int index;
+
+	for (index = 0; (start + index) < length; index++)
+	{
+		*(dest + start + index) = *(str + index);
+	}
 }

@@ -14,6 +14,10 @@ char *_strdup(char *str)
 	char *p = malloc(getLength(str) * sizeof(char));
 	int index;
 
+	if (p)
+	{
+		return (0);
+	}
 	/*copy string str to memory position @ p*/
 	for (index = 0; str[index] != '\0'; index++)
 	{
@@ -34,7 +38,7 @@ int getLength(char *str)
 {
 	int length;
 
-	for (length = 0; str[length] !='\0'; length++)
+	for (length = 0; str[length] != '\0'; length++)
 		;
 	return (length);
 }

@@ -10,16 +10,22 @@
 
 char *_strdup(char *str)
 {
-	/*allocate memory to copy string str and create index counter*/
+	/*Create pointer, index counter, and source string length variable.*/
 	char *p;
 	int index = 0;
-	int strlen = getLength(str);
+	int strlen;
 
-	p =  malloc(sizeof(char) * strlen);
+	/*Verify valid string*/
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+
+	/*find string length and allocate enough memory at pointer p*/
+	strlen = getLength(str);
+	p = malloc(sizeof(char) * strlen);
+
+	/*Verify malloc successful*/
 	if (p == NULL)
 	{
 		return (NULL);

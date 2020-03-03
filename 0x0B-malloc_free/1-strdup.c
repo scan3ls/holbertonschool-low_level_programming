@@ -21,18 +21,18 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	/*find string length and allocate enough memory at pointer p*/
+	/*Find string length and allocate enough memory at pointer p*/
 	strlen = getLength(str);
 	p = malloc(sizeof(char) * strlen);
 
-	/*Verify malloc successful*/
+	/*Verify if malloc was successful*/
 	if (p == NULL)
 	{
 		return (NULL);
 	}
 
-	/*copy string str to memory position @ p*/
-	for (index = 0; index <= strlen; index++)
+	/*Copy string str to memory position @ p*/
+	for (index = 0; index < strlen; index++)
 	{
 		*(p + index) = *(str + index);
 	}
@@ -53,5 +53,6 @@ int getLength(char *str)
 
 	for (length = 0; str[length] != '\0'; length++)
 		;
-	return (length);
+	/*Include null terminator in length*/
+	return (length + 1);
 }

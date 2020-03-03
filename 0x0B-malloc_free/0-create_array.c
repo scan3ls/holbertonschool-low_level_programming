@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
  * create_array - creatse array of chars and fills with a single char value
@@ -12,7 +13,7 @@ char *create_array(unsigned int size, char c)
 {
 	/*allocates enough memory for the array*/
 	char *p = malloc(size * sizeof(int));
-	int i;
+	unsigned int i;
 
 	if (size <= 0)
 	{
@@ -24,5 +25,7 @@ char *create_array(unsigned int size, char c)
 		{
 			p[i] = c;
 		}
+		return (p);
 	}
+	return (0);
 }

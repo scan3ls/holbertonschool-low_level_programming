@@ -12,9 +12,9 @@ char *_strdup(char *str)
 {
 	/*allocate memory to copy string str and create index counter*/
 	char *p = malloc(getLength(str) * sizeof(char));
-	int index;
+	int index = 0;
 
-	if (str)
+	if (str == 0)
 	{
 		/*copy string str to memory position @ p*/
 		for (index = 0; str[index] != '\0'; index++)

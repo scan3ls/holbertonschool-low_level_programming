@@ -11,24 +11,27 @@
 char *_strdup(char *str)
 {
 	/*allocate memory to copy string str and create index counter*/
-	char *p = malloc(getLength(str) * sizeof(char));
+	char *p;
 	int index = 0;
+	int strlen = getLength(str);
 
-	if (str)
+	p =  malloc(sizeof(char) * strlen);
+	if (str == NULL)
 	{
-		if (p)
-		{
-			/*copy string str to memory position @ p*/
-			for (index = 0; index < getLength(str); index++)
-			{
-				p[index] = str[index];
-			}
-
-			return (p);
-		}
+		return (NULL);
+	}
+	if (p == NULL)
+	{
+		return (NULL);
 	}
 
-	return (NULL);
+	/*copy string str to memory position @ p*/
+	for (index = 0; index < strlen; index++)
+	{
+		*(p + index) = *(str + index);
+	}
+
+	return (p);
 }
 
 /**

@@ -17,10 +17,12 @@ char *str_concat(char *s1, char *s2)
 	/*Check if NULL is passed*/
 	if (s1 == NULL)
 	{
+		s1 = malloc(1);
 		s1[0] = '\0';
 	}
 	if (s2 == NULL)
 	{
+		s2 = malloc(1);
 		s2[0] = '\0';
 	}
 
@@ -43,6 +45,7 @@ char *str_concat(char *s1, char *s2)
 	/*Copy strings to new location*/
 	_strcpy(s1, concatStr, 0, (strlenS1 - 1));
 	_strcpy(s2, concatStr, (strlenS1 - 1), strlenS3);
+
 
 	return (concatStr);
 }

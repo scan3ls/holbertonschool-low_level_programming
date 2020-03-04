@@ -20,19 +20,29 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	/*Allocate memory for gird*/
+	/*Allocate memory for pointers*/
 	grid = malloc(sizeof(int *) * height);
-	for (row = 0; row < height; row++)
-	{
-		grid[row] = malloc(sizeof(int) * width);
-	}
-
 	/*Verify malloc was successful*/
 	if (grid == NULL)
 	{
 		return (NULL);
 	}
 
+	/*Allocate memory for values of the grid*/
+	for (row = 0; row < height; row++)
+	{
+		grid[row] = malloc(sizeof(int) * width);
+	}
+	/*Verify malloc was successful*/
+	for (row = 0; row < height; row++)
+	{
+		if (grid[row] == NULL)
+		{
+			return (NULL);
+		}
+	}
+
+	/*Populate grid with value of zero*/
 	for (row = 0; row < height; row++)
 	{
 		for (column = 0; column < width; column++)

@@ -9,5 +9,6 @@ void _strcpy(char *str, char *dest, int start, int length);
 int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
+char **strtow(char *str);
 
 #endif

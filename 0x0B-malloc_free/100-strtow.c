@@ -30,8 +30,12 @@ int wordlen(char *str, int word)
 		i++;
 	}
 
-	for (i; str[i] != ' ' && str[i] != '\0'; i++)
+	while (str[i] != ' ' && str[i] != '\0')
+	{
 		len++;
+		i++;
+	}
+
 	return (len + 2);
 }
 
@@ -71,11 +75,9 @@ int _wordcount(char *str)
 char **strtow(char *str)
 {
 	int i, wordcount, k, a;
-	int totalspace;
 	char **ddarry;
-	char *nuul;
 
-	if (str == NULL || str == "")
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 	wordcount = _wordcount(str);
 	ddarry = malloc(sizeof(char *) * wordcount + 1);
@@ -83,10 +85,10 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 0; i < wordcount; i++)
 	{
-		ddarry[i] = malloc(sizeof(char) * _wordlen(str, i));
+		ddarry[i] = malloc(sizeof(char) * wordlen(str, i));
 		if (ddarry[i] == NULL)
 		{
-			for (i; i >= 0; i--)
+			for (; i >= 0; i--)
 				free(ddarry[i]);
 			free(ddarry);
 			return (NULL);
@@ -105,4 +107,5 @@ char **strtow(char *str)
 		ddarry[i][k + 1] = '\n';
 		ddarry[i][k + 2] = '\0';
 	}
+	return (ddarry);
 }

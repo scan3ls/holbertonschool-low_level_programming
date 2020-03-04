@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -15,7 +15,7 @@ int **alloc_grid(int width, int height)
 	int **grid;
 	int row, column;
 
-        if (width <= 0 || height <= 0)
+	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
@@ -43,7 +43,6 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
-
 	/*Populate grid with value of zero*/
 	for (row = 0; row < height; row++)
 	{
@@ -52,6 +51,5 @@ int **alloc_grid(int width, int height)
 			grid[row][column] = 0;
 		}
 	}
-
 	return (grid);
 }

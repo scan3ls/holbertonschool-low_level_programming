@@ -49,7 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = s2len;
 	}
 	/*Allocate Memory for final string*/
-	s3 = malloc(sizeof(char) * (s1 + n + 1));
+	s3 = malloc(sizeof(char) * (s1len + n + 1));
 	if (s3 == NULL)
 	{
 		return (NULL);

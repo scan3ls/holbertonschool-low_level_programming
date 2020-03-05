@@ -3,39 +3,19 @@
 
 
 /**
- * getLength - find length of a string
+ * _strlen - find length of a string
  *@s: source string
  *
  * Return: length of string
  */
 
-int getLength(char *s)
+int _strlen(char *s)
 {
 	int length;
 
 	for (length = 0; s[length] != '\0'; length++)
 		;
-	return (length + 1);
-}
-
-/**
- * _strcpy - copy a string to a pointer location
- *@str: string to copy
- *@dest: pointer location destination
- *@length: amount of the source string copied
- *@start: starting index
- *
- * Return: copied string
- */
-
-void _strcpy(char *str, char *dest, int start, int length)
-{
-	int index;
-
-	for (index = 0; (start + index) < length; index++)
-	{
-		*(dest + start + index) = *(str + index);
-	}
+	return (length);
 }
 
 /**
@@ -49,43 +29,43 @@ void _strcpy(char *str, char *dest, int start, int length)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *concatStr;
-	unsigned int strlenS1, strlenS2, strlenS3;
+	unsigned int s1len, s2len;
+	char *s3;
 
-	/*Check if NULL is passed*/
+	/*Check if arguments are NULL*/
 	if (s1 == NULL)
 	{
-		s1 = malloc(1);
-		s1[0] = '\0';
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		s2 = malloc(1);
-		s2[0] = '\0';
+		s2 = "";
 	}
-	/*Get string lengths: Set strlenS2 to length of final string*/
-	strlenS1 = getLength(s1);
-	strlenS2 = getLength(s2);
-	if (n >= strlenS2)
+	/*Get string Lengths*/
+	s1len = _strlen(s1);
+	s2len = _strlen(s2);
+	if (n >= s2len)
 	{
-		n = strlenS2 - 1;
+		n = s2len;
 	}
-	/*Set final string length*/
-	strlenS3 = (strlenS1 - 1) + n + 1;
-
-	/*Allocate enough memory for final string*/
-	concatStr = malloc(sizeof(char) * strlenS3 + 1);
-
-	/*Verify if malloc was successful*/
-	if (concatStr == NULL)
+	/*Allocate Memory for final string*/
+	s3 = malloc(sizeof(char) * (s1 + n + 1));
+	if (s3 == NULL)
 	{
 		return (NULL);
 	}
+	/*Fill initial part of s3 with s1 values : Reuse s1len for s3 counter*/
+	for (s1len =  0; s1[s1len] != '\0'; s1len++)
+	{
+		s3[s1len] = s1[s1len];
+	}
+	/*Fill remaining s3 with s2 values : Reuse s2len for s2 counter*/
+	for (s2len = 0; s2[s2len] != '\0'; s2len++)
+	{
+		s3[s1len] = s2[s2len];
+		s1len++;
+	}
+	s3[s1len] = '\0';
 
-	/*Copy strings to new location*/
-	_strcpy(s1, concatStr, 0, (strlenS1 - 1));
-	_strcpy(s2, concatStr, (strlenS1 - 1), strlenS3);
-	concatStr[strlenS3] = '\0';
-
-	return (concatStr);
+	return (s3);
 }

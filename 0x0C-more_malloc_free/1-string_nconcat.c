@@ -50,7 +50,7 @@ void _strcpy(char *str, char *dest, int start, int length)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concatStr;
-	unsigned int strlenS1, strlenS2, strlenS3;
+	unsigned int strlenS1, strlenS2, strlenS3, i;
 
 	/*Check if NULL is passed*/
 	if (s1 == NULL)
@@ -82,11 +82,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-
+	for (i = 0; i < strlenS3; i++)
+		concatStr[i] = '\0';
 	/*Copy strings to new location*/
 	_strcpy(s1, concatStr, 0, (strlenS1 - 1));
 	_strcpy(s2, concatStr, (strlenS1 - 1), strlenS3);
-
-
 	return (concatStr);
 }

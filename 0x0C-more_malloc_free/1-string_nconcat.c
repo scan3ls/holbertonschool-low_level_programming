@@ -82,10 +82,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < strlenS3; i++)
-		concatStr[i] = '\0';
+
 	/*Copy strings to new location*/
 	_strcpy(s1, concatStr, 0, (strlenS1 - 1));
 	_strcpy(s2, concatStr, (strlenS1 - 1), strlenS3);
+	concatStr[strlenS3] = '\0';
+
 	return (concatStr);
 }

@@ -75,7 +75,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	strlenS3 = (strlenS1 - 1) + n;
 
 	/*Allocate enough memory for final string*/
-	concatStr = malloc(sizeof(char) * strlenS3);
+	concatStr = malloc(sizeof(char) * strlenS3 + 1);
 
 	/*Verify if malloc was successful*/
 	if (concatStr == NULL)

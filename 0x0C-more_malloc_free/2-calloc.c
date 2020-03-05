@@ -36,6 +36,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (p == NULL)
 		return (NULL);
 
-	tozero(p, (size *nmemb));
+	tozero(p, (size * nmemb));
 	return (p);
 }

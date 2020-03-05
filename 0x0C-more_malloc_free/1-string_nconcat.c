@@ -66,12 +66,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*Get string lengths: Set strlenS2 to length of final string*/
 	strlenS1 = getLength(s1);
 	strlenS2 = getLength(s2);
-	if (n > strlenS2)
+	if (n >= strlenS2)
 	{
-		n = strlenS2;
+		n = strlenS2 - 1;
 	}
 	/*Set final string length*/
-	strlenS3 = (strlenS1 - 1) + n;
+	strlenS3 = (strlenS1 - 1) + n + 1;
 
 	/*Allocate enough memory for final string*/
 	concatStr = malloc(sizeof(char) * strlenS3 + 1);
@@ -85,8 +85,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/*Copy strings to new location*/
 	_strcpy(s1, concatStr, 0, (strlenS1 - 1));
 	_strcpy(s2, concatStr, (strlenS1 - 1), strlenS3);
-	if (n != strlenS2)
-		concatStr[strlenS3] = '\0';
+	concatStr[strlenS3] = '\0';
 
 	return (concatStr);
 }

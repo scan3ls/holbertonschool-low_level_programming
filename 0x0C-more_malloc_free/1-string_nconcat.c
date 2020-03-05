@@ -60,7 +60,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s3[s1len] = s1[s1len];
 	}
 	/*Fill remaining s3 with s2 values : Reuse s2len for s2 counter*/
-	for (s2len = 0; s2[s2len] != '\0'; s2len++)
+	for (s2len = 0; s2len < n; s2len++)
 	{
 		s3[s1len] = s2[s2len];
 		s1len++;

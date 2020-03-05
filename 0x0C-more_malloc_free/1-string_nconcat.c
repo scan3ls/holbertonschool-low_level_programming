@@ -50,7 +50,7 @@ void _strcpy(char *str, char *dest, int start, int length)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *concatStr;
-	unsigned int strlenS1, strlenS2, strlenS3, i;
+	unsigned int strlenS1, strlenS2, strlenS3;
 
 	/*Check if NULL is passed*/
 	if (s1 == NULL)

@@ -1,23 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
-/**
- * fill_array - fill array with incrementing integers
- *@a: array to be filled
- *@length: length of the array
- *
- * Return: void
- */
 
-void fill_array(int *a, size_t start, size_t length)
-{
-	int *p;
-
-	p = a;
-	for (; start < length; start++)
-	{
-		*p++ = start;
-	}
-}
 /**
  * array_range - creates array from @min to @max
  *@min: minimum integer
@@ -30,13 +13,21 @@ int *array_range(int min, int max)
 {
 	int *p;
 	int length = max - min + 1;
+	int i;
 
 	if (min > max)
 		return (NULL);
+
 	p = malloc(sizeof(int) * length);
-	if(p == NULL)
+	if (p == NULL)
 		return (NULL);
-	fill_array(p, min, length);
+
+
+	for (i = 0; i < length; i++)
+	{
+		p[i] = min;
+		min++;
+	}
 
 	return (p);
 }

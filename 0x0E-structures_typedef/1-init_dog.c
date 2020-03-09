@@ -2,21 +2,19 @@
 #include "dog.h"
 #include <stdlib.h>
 
-struct dog *dog(char *name, float age, char *owner)
-{
-	struct dog *dog;
-
-	dog = malloc(sizeof(struct dog));
-	if (dog == NULL)
-		return (NULL);
-	dog->name = name;
-	dog->age = age;
-	dog->owner = owner;
-	return (dog);
-}
+/**
+ * init_dog - initialize dog struct
+ *@d: new dog pointer
+ *@name: name
+ *@age: age
+ *@owner: owner
+ */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	if (d == NULL)
+		return;
+
 	d->name = name;
 	d->age = age;
 	d->owner = owner;

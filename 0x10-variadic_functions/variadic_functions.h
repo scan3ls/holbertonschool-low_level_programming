@@ -3,7 +3,13 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-typedef struct formlist{
+/**
+ * struct formlist - pair type to a print funciton
+ *@type: handle type
+ *@func: pointer to correct function
+ */
+typedef struct formlist
+{
 	char *type;
 	void (*func)(va_list list);
 } formlist;

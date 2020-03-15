@@ -44,20 +44,40 @@ void print_all(const char * const format, ...)
 	printf("\n");
 }
 
+/**
+ * print_char - prints a char to standard output
+ *@list: char argument to print
+ */
+
 void print_char(va_list list)
 {
 	printf("%c", va_arg(list, int));
 }
+
+/**
+ * print_int - prints an int to standard output
+ *@list: int argument to print
+ */
 
 void print_int(va_list list)
 {
 	printf("%d", va_arg(list, int));
 }
 
+/**
+ * print_float - prints a float to standard output
+ *@list: float argument to print
+ */
+
 void print_float(va_list list)
 {
 	printf("%f", va_arg(list, double));
 }
+
+/**
+ * print_string - prints a char* to standard output
+ *@list: char* argument to print
+ */
 
 void print_string(va_list list)
 {

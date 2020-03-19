@@ -22,6 +22,12 @@ size_t print_list(const list_t *h)
 	return (n);
 }
 
+/**
+ * print_element - prints a single node of a list_t list
+ *@u: length
+ *@s: string
+ */
+
 void print_element(unsigned int u, char *s)
 {
 	if (s == NULL)

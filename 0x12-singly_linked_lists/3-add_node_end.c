@@ -3,23 +3,48 @@
 #include <string.h>
 
 /**
- * add_node_end - add new node a the end of a list_t list
- *@head: start of the list
- *@str: string element of the node in list_t list
+ * add_node_end - adds a new node to the end of a list_t list
+ *@head: pointer to the current head node
+ *@str: string of the node to add
  *
- * Return: pointer to current node
+ * Return: pointer to new node
  */
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-       	if (head == NULL)
-	{
-		printf("no\n");
-	}
-	else
-		printf("[%u] %s\n", _strlen(str), str);
+	list_t *temp;
+	list_t *tail;
 
-	return (*head);
+	temp = malloc(sizeof(list_t));
+	if (temp == NULL)
+		return (0);
+	tail = malloc(sizeof(list_t));
+	if (tail == NULL)
+		return (0);
+
+	if ((*head) == NULL)
+	{
+
+		(temp)->next = NULL;
+		(temp)->str = strdup(str);
+		(temp)->len = _strlen(str);
+		*head = temp;
+		return (*head);
+	}
+
+	tail = *head;
+	while (tail->next != NULL)
+	{
+		tail = tail->next;
+	}
+
+	tail->next = temp;
+
+	temp->str = strdup(str);
+	temp->len = _strlen(str);
+	temp->next = NULL;
+
+	return (temp);
 }
 
 /**

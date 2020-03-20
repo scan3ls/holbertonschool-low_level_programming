@@ -33,7 +33,7 @@ void print_element(unsigned int u, char *s)
 {
 	if (s == NULL)
 	{
-		printf("[0] (nill)");
+		printf("[0] (nil)");
 	}
 	else
 	{

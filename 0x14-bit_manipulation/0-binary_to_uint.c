@@ -24,10 +24,16 @@ unsigned int binary_to_uint(const char *b)
 	}
 	return (num);
 }
-
+/**
+ * getBinLen - get len and verify valid binary number
+ *@b: binary number
+ *
+ * Return: len if valid -1 if not valid
+ */
 int getBinLen(const char *b)
 {
 	int len = 0;
+
 	while (b[len] != '\0')
 	{
 		if (b[len] != '0' && b[len] != '1')
@@ -36,7 +42,13 @@ int getBinLen(const char *b)
 	}
 	return (len);
 }
-
+/**
+ * _pow - calc the power of a number
+ *@base: base number
+ *@power: power number
+ *
+ * Return: base ^ power
+ */
 int _pow(int base, int power)
 {
 	int num = 1;

@@ -14,7 +14,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	int index;
 	int sum = 0;
 
-	for (index = 0; index < 32; index++)
+	for (index = 0; index < 64; index++)
 	{
 		if (changed & 1)
 			sum++;

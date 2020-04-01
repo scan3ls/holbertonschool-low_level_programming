@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	hClose(f_from);
+	hClsoe(f_from);
 	hClose(f_to);
 	return (0);
 }
@@ -65,7 +65,7 @@ void hClose(int fd)
 	check = close(fd);
 	if (check == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }

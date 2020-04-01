@@ -3,7 +3,7 @@
 #include "holberton.h"
 
 #define KB 1024
-
+#define MAX_SIZE (50 * KB)
 /**
  * main - copies contents from one file to another
  *@argc: number of arguments
@@ -15,7 +15,7 @@
 int main(int argc, char *argv[])
 {
 	int f_to, f_from;
-	char buf[5 * KB];
+	char buf[MAX_SIZE];
 	mode_t permissions = 00664;
 
 	if (argc != 3)
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	}
 
 	/* read source file */
-	f_from = read_file(argv[1], (5 * KB), buf);
+	f_from = read_file(argv[1], MAX_SIZE, buf);
 	if (f_from == -1)
 	{
 		dprintf(STDERR_FILENO,

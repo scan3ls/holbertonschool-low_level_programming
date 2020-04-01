@@ -76,6 +76,7 @@ ssize_t read_file(const char *filename, size_t letters, char *buf)
 		       "Error: Can't close fd %d\n",
 		       fd
 			);
+		exit(100);
 	}
 	return (rd);
 }
@@ -119,6 +120,7 @@ int create_file2(const char *filename, char *text_content, mode_t permissions)
 		       "Error: Can't close fd %d\n",
 		       fd
 			);
+		exit(100);
 	}
 	if (wd == -1)
 		return (-1);

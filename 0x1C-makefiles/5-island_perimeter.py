@@ -8,9 +8,11 @@ def island_perimeter(grid):
     index = 0
     prim = 0
 
-    if 0 not in grid:
+    for layer in grid:
+        if 0 in layer:
+            break
         height = len(grid)
-        width = len(grid[0])
+        width = len(layer)
         return 2 * height + 2 * width
 
     for layer in range(0, floor):

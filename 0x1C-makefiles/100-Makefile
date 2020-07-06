@@ -4,7 +4,7 @@ NAME = holberton
 SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
 
-all: $(OBJ)
+all: $(OBJ) m.h
 		$(CC) $(OBJ) -o $(NAME)
 
 clean:

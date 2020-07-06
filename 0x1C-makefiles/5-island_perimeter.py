@@ -9,13 +9,14 @@ def island_perimeter(grid):
     prim = 0
 
     for layer in range(0, floor):
-        topLayer = None
-        if layer - 1 >= 0:
+        try:
             topLayer = grid[layer - 1]
-
-        bottomLayer = None
-        if layer + 1 < len(grid[layer]) - 1:
+        except:
+            topLayer = None
+        try:
             bottomLayer = grid[layer + 1]
+        except:
+            bottomLayer = None
 
         middleLayer = grid[layer]
         length = len(middleLayer) - 1
